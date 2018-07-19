@@ -1,0 +1,10 @@
+<app-comp1></app-comp1>
+<app-comp2></app-comp2>
+<p hidden>{{car.carDetails()}}</p>
+<p hidden>{{jso|json}}</p>
+<li hidden *ngFor="let data of jso">
+Date:{{data.DateTime | date:'d/m/y HH:mm'}}
+Status:{{data.IconPhrase}} 
+Temperature:{{data.Temperature.Value}}{{data.Temperature.Unit}}
+<img [src]="data.WeatherIcon>10?(iconlink+data.WeatherIcon+'-s.png'):(iconlink+'0'+data.WeatherIcon+'-s.png')">
+</li>
